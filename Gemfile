@@ -53,3 +53,5 @@ gem 'simple_form'
 gem 'kaminari'
 
 gem 'devise'
+
+ruby "2.0.0"
