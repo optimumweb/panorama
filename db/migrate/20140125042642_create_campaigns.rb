@@ -9,6 +9,7 @@ class CreateCampaigns < ActiveRecord::Migration
       t.datetime :end_date
       t.decimal :expected_cost, precision: 16, scale: 2
       t.decimal :actual_cost, precision: 16, scale: 2
+      t.belongs_to :creator
       t.timestamps
     end
   end
