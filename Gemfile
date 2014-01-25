@@ -54,4 +54,6 @@ gem 'kaminari'
 
 gem 'devise'
 
+gem 'simple_enum', '~> 1.6.8'
+
 ruby "2.0.0"
