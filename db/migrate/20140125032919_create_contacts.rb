@@ -20,10 +20,11 @@ class CreateContacts < ActiveRecord::Migration
       t.string :utm_medium
       t.string :utm_content
       t.string :utm_term
-      t.belongs_to :organization
-      t.belongs_to :team
       t.belongs_to :creator
       t.belongs_to :assigned_user
+      t.belongs_to :team
+      t.belongs_to :account
+
       t.timestamps
     end
   end

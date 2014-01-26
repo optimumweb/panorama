@@ -1,4 +1,4 @@
-class Organization < ActiveRecord::Base
+class Account < ActiveRecord::Base
   as_enum :status, [:active, :disabled, :deleted], strings: true
   as_enum :plan, [:trial, :paid], strings: true
 
@@ -9,4 +9,6 @@ class Organization < ActiveRecord::Base
   has_many :appointments
   has_many :email_layouts
   has_many :email_templates
+
+  validates :name, :status, :plan, presence: true
 end

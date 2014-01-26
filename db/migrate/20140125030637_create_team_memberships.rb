@@ -3,6 +3,7 @@ class CreateTeamMemberships < ActiveRecord::Migration
     create_table :team_memberships do |t|
       t.belongs_to :team
       t.belongs_to :user
+
       t.timestamps
     end
   end

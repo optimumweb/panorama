@@ -2,7 +2,7 @@ class Contact < ActiveRecord::Base
   as_enum :salutation, [:mr, :mrs, :ms, :dr, :prof], strings: true
   as_enum :status, [:lead, :client], strings: true
 
-  belongs_to :organization
+  belongs_to :account
   belongs_to :team
   belongs_to :creator, class_name: "User"
   belongs_to :assigned_user, class_name: "User"
@@ -16,4 +16,6 @@ class Contact < ActiveRecord::Base
   has_many :emails_received, as: :to, class_name: "Email", foreign_key: "to_id"
   has_many :tasks, as: :taskable
   has_many :comments, as: :commentable
+
+  validates :account, presence: true
 end

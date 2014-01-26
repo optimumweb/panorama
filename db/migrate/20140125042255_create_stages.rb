@@ -3,8 +3,9 @@ class CreateStages < ActiveRecord::Migration
     create_table :stages do |t|
       t.string :name
       t.text :description
-      t.integer :order
-      t.belongs_to :organization
+      t.integer :rank
+      t.belongs_to :account
+
       t.timestamps
     end
   end

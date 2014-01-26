@@ -10,6 +10,8 @@ class CreateCampaigns < ActiveRecord::Migration
       t.decimal :expected_cost, precision: 16, scale: 2
       t.decimal :actual_cost, precision: 16, scale: 2
       t.belongs_to :creator
+      t.belongs_to :account
+
       t.timestamps
     end
   end

@@ -10,7 +10,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :title
       t.has_attached_file :avatar
       t.string :tel
-      t.belongs_to :organization
+      t.belongs_to :account
+
       t.timestamps
     end
   end
