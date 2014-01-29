@@ -12,6 +12,8 @@ class Task < ActiveRecord::Base
   validates :name, length: {minimum: 1}
   validates :is_urgent, inclusion: {in: [true, false]}
 
+  private
+
   def set_default_values
     self.status = 'normal' if self.status.nil?
     self.is_urgent = false if self.is_urgent.nil?
