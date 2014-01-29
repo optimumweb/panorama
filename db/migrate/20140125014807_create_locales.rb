@@ -7,7 +7,4 @@ class CreateLocales < ActiveRecord::Migration
       t.timestamps
     end
   end
-
-  # locale code must be unique
-  add_index :locales, :code, unique: true
 end
